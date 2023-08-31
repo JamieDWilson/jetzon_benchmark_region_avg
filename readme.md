@@ -1,6 +1,7 @@
 # README
 
 ## Reading benchmark spreadsheet
+
 [!NOTE] 
 This is currently under development! See the example_spreadsheet.xlsx for current working example
 
@@ -29,3 +30,8 @@ You can add basin information using the WOA18 mask definitions:
 2. add ```[ mask , basin_id ] = get_WOA_basin_mask ( lat , lon );``` to the top of the region defintion script of choice.
 3. run the region definition script of choice, e.g.,
    ``` run('regions/regions_weberlinear_basins.m')```
+
+## Currently Available Region Definitions
+* regions_weberlinear (Adrian Martin's "by eye" linear approximation of Weber et al., 2016 PNAS regions)
+* regions_weberlinear_hemispheres (... separated by hemipsheres)
+* regions_weberlinear_basin (... separated by basins)
