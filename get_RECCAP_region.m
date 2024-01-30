@@ -37,6 +37,12 @@ MASK = reshape(masky,[],1);
 LON=reshape(LON,[],1);
 LAT=reshape(LAT,[],1);
 
+% remove land (==0) so as to find closest wet grid points
+ind=MASK==0;
+MASK(ind)=[];
+LON(ind)=[];
+LAT(ind)=[];
+
 % region names
 region_names={...
     'Arctic',...
@@ -69,7 +75,7 @@ if ~isempty(varargin)
     
     % update numbering
     region_ind=unique(mask_tmp);
-    count=0;
+    count=1;
     for n=1:numel(region_ind)
         mask_tmp(mask_tmp==region_ind(n))=count;
         count=count+1;
