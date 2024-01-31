@@ -1,14 +1,15 @@
 % -------------------------------------------------------------------------
 % get_RECCAP_region
 %
-% description: takes latitude and longitude pairs and finds the closest
+% Description: takes latitude and longitude pairs and finds the closest
 % RECCAP region based on the 1deg RECCAP grid
-% inputs: 
+%
+% Inputs: 
 %   - lat:      latitude (mx1 array)
 %   - lon:      longitude (mx1 array , lon values between 0 to 360 degE)
 %   - varargin: pairs of string and integer array for combining regions
 %           
-% outputs:
+% Outputs:
 %   - region:       region number for given lon/lat pair (mx1 array)
 %   - region_names: region long names (mx1 cell of strings)
 %   - coords:       nearest lon and lat values (struct)
@@ -17,6 +18,21 @@
 % To combine regions: add any number of string/array pairs containing name
 % of new region and region numbers to combine, e.g., 
 % get_RECCAP_region(lat,lon,'region1',[1 2 3],'region2',[3 4 5]);
+%
+% Default Region Numbering:
+% 1) Arctic
+% 2) North Atlantic
+% 3) North Pacific
+% 4) Subtropical North Atlantic
+% 5) Subtropical North Pacific
+% 6) Subtropical Indian
+% 7) Equatorial Atlantic
+% 8) Equatorial Pacific
+% 9) Subtropical South Atlantic
+% 10) Subtropical South Pacific
+% 11) Subtropical Indian
+% 12) Subantarctic
+% 13) Antarctic
 %
 % authors: Jamie D. Wilson (jamie.wilson@liverpool.ac.uk); Erik Fields (fields@ucsb.edu)
 % created: 30th January 2024
