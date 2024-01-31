@@ -27,7 +27,7 @@ where:
 
 For example, to get ocean basins use:
 ```matlab
-[ region , region_names , coords] = get_RECCAP_region ( lat , lon , 'Atlantic , [2 4 7 9] 'Pacific' , [3 5 8 10] , 'Indian' , [6 11] , 'Southern Ocean' , [12 13]);
+[ region , region_names , coords] = get_RECCAP_region ( lat , lon , 'Atlantic , [2 4 7 9] , 'Pacific' , [3 5 8 10] , 'Indian' , [6 11] , 'Southern Ocean' , [12 13]);
 ```
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
